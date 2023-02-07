@@ -1,0 +1,143 @@
+html, body{
+    height: 99%;
+}
+
+body{
+    background-color: #3B3838;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: #2A2929;
+    /*display: flex;
+    flex-flow: column;*/
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    padding-top: 30px;
+    margin: 0px 20px;
+    padding: 0px 20px;
+    align-items: center;
+    /*position: fixed;*/
+}
+
+.midicixLogo{
+    border-radius: 700px;
+    width: 100px;
+    margin: 5px;
+    float: left;
+    position: relative;
+}
+
+.headerText:after{
+    display:block;
+    content: '';
+    border-bottom: solid 2px orange;
+    transform: scaleX(0);
+    transition: transform 200ms ease-in-out;
+    transform-origin:100% 50%
+}
+
+.headerText:hover:after { 
+    transform: scaleX(1);
+    transform-origin:0 50%;
+  }
+
+a{
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+
+section{
+    flex-grow: 1;
+}
+
+.welcomePicture{
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.networkIcons{
+    width: 75px;
+    border-radius: 700px;
+    opacity: 0;
+    pointer-events: none;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-name: slideUp;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideUp {
+    from{
+        opacity: 0;
+        margin-top: 60px;
+    }
+
+    to{
+        opacity: 1;
+        margin-top: 0px;
+        pointer-events: all;
+    }
+}
+
+.mainText{
+    opacity: 0;
+    animation-delay: 3s;
+    animation-duration: 1s;
+    animation-name: spawn;
+    animation-fill-mode: forwards;
+}
+
+@keyframes spawn {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+.networkIconsArea{
+    margin : 50px auto;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+}
+
+.networkIconsArea a, .logoHeader{
+    font-size: 0px;
+    width: 0px;
+}
+
+.error404{
+    text-align: center;
+    margin-top: 15%;
+    font-size: 75px;
+    color:cornflowerblue;
+}
+
+footer{
+    background-color: #2A2929;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0px;
+    display: grid;
+    bottom: 0;
+}
+
+.footerText{
+    grid-column-start: span 3;
+    width: 100%;
+    text-align: center;
+}
