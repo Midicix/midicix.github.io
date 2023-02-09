@@ -45,7 +45,22 @@ header{
 .headerText:hover:after { 
     transform: scaleX(1);
     transform-origin:0 50%;
-  }
+}
+
+.textTab:after{
+    display:grid;
+    width: auto;
+    content: '';
+    border-bottom: solid 2px #E50909;
+    transform: scaleX(0);
+    transition: transform 200ms ease-in-out;
+    transform-origin:100% 50%;
+}
+
+.textTab:hover:after { 
+    transform: scaleX(1);
+    transform-origin:0 50%;
+}
 
 a{
     color: white;
@@ -54,6 +69,11 @@ a{
     text-decoration: none;
 }
 
+h1{
+    font-size: 56px;
+    color: darkcyan;
+    text-align: center;
+}
 
 section{
     flex-grow: 1;
@@ -71,7 +91,7 @@ section{
     border-radius: 700px;
     opacity: 0;
     pointer-events: none;
-    animation-delay: 2s;
+    animation-delay: 1.5s;
     animation-duration: 1s;
     animation-name: slideUp;
     animation-fill-mode: forwards;
@@ -90,10 +110,23 @@ section{
     }
 }
 
-.mainText{
+.spawnSection{
     opacity: 0;
-    animation-delay: 3s;
+    animation-delay: 2.5s;
     animation-duration: 1s;
+    animation-name: spawn;
+    animation-fill-mode: forwards;
+}
+
+.spawnSection2{
+    padding-top: 30px;
+    opacity: 0;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    animation-delay: 1.25s;
+    animation-duration: 1s;
+    pointer-events: none;
     animation-name: spawn;
     animation-fill-mode: forwards;
 }
@@ -105,6 +138,7 @@ section{
 
     to{
         opacity: 1;
+        pointer-events: all;
     }
 }
 
@@ -140,4 +174,66 @@ footer{
     grid-column-start: span 3;
     width: 100%;
     text-align: center;
+}
+
+.morpion{
+    margin-right: 10px;
+    width: 200px;
+}
+
+p{
+    text-align: center;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+    color: #16C414;
+    font-size: 55px;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 0; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 4px; /* Adjust as needed */
+    animation: typing 1s steps(30, end);
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriterwelcome h1 {
+    color: #16C414;
+    font-size: 55px;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 0; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 4px; /* Adjust as needed */
+    animation: typing 2s steps(30, end), blink-caret .5s step-end infinite;
+}
+  
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: orange }
+}
+
+/* The typing effect */
+@keyframes typing {
+from { width: 0}
+to { width: 100%}
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.videoProgram, .textProgram{
+    width: 200px;
+}
+
+
+
+@media screen and (max-width:720px) {
+
 }
