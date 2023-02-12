@@ -12,17 +12,20 @@ body{
 }
 
 header{
+    /*
+    position: fixed;
+    width: 93.4%;
+    */
+    z-index: 999;
     background-color: #2A2929;
-    /*display: flex;
-    flex-flow: column;*/
     display: grid;
     grid-auto-flow: column;
     justify-content: space-between;
-    padding-top: 30px;
     margin: 0px 20px;
     padding: 0px 20px;
     align-items: center;
-    /*position: fixed;*/
+    position: sticky;
+    top: 0px;
 }
 
 .midicixLogo{
@@ -47,6 +50,33 @@ header{
     transform-origin:0 50%;
 }
 
+.textTab {
+    background-image: linear-gradient(90deg, #E31686, #BC14E5);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size .6s ease;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.textTab:hover{
+    background-size: 100% 3px;
+}
+
+/*
+.textTab {
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    color: #54b3d6;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+.textTab:hover {
+    box-shadow: inset 100px 0 0 0 #54b3d6;
+    color: white;
+  }
+
 .textTab:after{
     display:grid;
     width: auto;
@@ -60,7 +90,7 @@ header{
 .textTab:hover:after { 
     transform: scaleX(1);
     transform-origin:0 50%;
-}
+}*/
 
 a{
     color: white;
@@ -118,12 +148,29 @@ section{
     animation-fill-mode: forwards;
 }
 
+/*
 .spawnSection2{
     padding-top: 30px;
     opacity: 0;
     display: grid;
     grid-auto-flow: column;
     justify-content: space-around;
+    animation-delay: 1.25s;
+    animation-duration: 1s;
+    pointer-events: none;
+    animation-name: spawn;
+    animation-fill-mode: forwards;
+}
+*/
+
+.spawnSection2{
+    padding-top: 30px;
+    opacity: 0;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 200px;
     animation-delay: 1.25s;
     animation-duration: 1s;
     pointer-events: none;
@@ -143,7 +190,7 @@ section{
 }
 
 .networkIconsArea{
-    margin : 50px auto;
+    margin : 150px auto;
     display: grid;
     grid-auto-flow: column;
     justify-content: space-around;
@@ -191,7 +238,7 @@ p{
     font-size: 55px;
     font-family: monospace;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    white-space: nowrap; /* Keeps the content on a single line */
+    white-space: nowrap;     /* Keeps the content on a single line */
     margin: 0 0; /* Gives that scrolling effect as the typing happens */
     letter-spacing: 4px; /* Adjust as needed */
     animation: typing 1s steps(30, end);
@@ -235,5 +282,32 @@ main{
 
 
 @media screen and (max-width:720px) {
-
+    .logoHeader img{
+        width: 50px;
+    }
+    a{
+        font-size: 12px;
+    }
+    .typewriterwelcome h1{
+        font-size: 23px;
+    }
+    .typewriter h1{
+        font-size: 23px;
+    }
+    h1{
+        font-size: 21px;
+    }
+    .spawnSection p{
+        font-size: 12px;
+    }
+    .networkIconsArea img{
+        width: 50px;
+    }
+    .spawnSection2{
+        grid-template-columns: 150px;
+        margin-bottom: 10px;
+    }
+    .videoProgram{
+        width: 150px;
+    }
 }
