@@ -289,8 +289,8 @@ main{
         font-size: 12px;
     }
     .typewriterwelcome h1{
-        font-size: 65%; /* 41.818% */
-        letter-spacing: 35%;
+        font-size: 18px; /* 41.818% */
+        letter-spacing: 0.4px;
     }
     .typewriter h1{
         font-size: 23px;
