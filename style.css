@@ -12,10 +12,6 @@ body{
 }
 
 header{
-    /*
-    position: fixed;
-    width: 93.4%;
-    */
     z-index: 999;
     background-color: #2A2929;
     display: grid;
@@ -51,7 +47,7 @@ header{
 }
 
 .textTab {
-    background-image: linear-gradient(90deg, #E31686, #BC14E5);
+    background-image: linear-gradient(90deg, #798A78, #798A79);
     background-size: 0% 3px;
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -63,34 +59,6 @@ header{
 .textTab:hover{
     background-size: 100% 3px;
 }
-
-/*
-.textTab {
-    box-shadow: inset 0 0 0 0 #54b3d6;
-    color: #54b3d6;
-    margin: 0 -.25rem;
-    padding: 0 .25rem;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-  }
-.textTab:hover {
-    box-shadow: inset 100px 0 0 0 #54b3d6;
-    color: white;
-  }
-
-.textTab:after{
-    display:grid;
-    width: auto;
-    content: '';
-    border-bottom: solid 2px #E50909;
-    transform: scaleX(0);
-    transition: transform 200ms ease-in-out;
-    transform-origin:100% 50%;
-}
-
-.textTab:hover:after { 
-    transform: scaleX(1);
-    transform-origin:0 50%;
-}*/
 
 a{
     color: white;
@@ -147,21 +115,6 @@ section{
     animation-name: spawn;
     animation-fill-mode: forwards;
 }
-
-/*
-.spawnSection2{
-    padding-top: 30px;
-    opacity: 0;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: space-around;
-    animation-delay: 1.25s;
-    animation-duration: 1s;
-    pointer-events: none;
-    animation-name: spawn;
-    animation-fill-mode: forwards;
-}
-*/
 
 .spawnSection2{
     padding-top: 30px;
@@ -289,7 +242,7 @@ main{
         font-size: 12px;
     }
     .typewriterwelcome h1{
-        font-size: 18px; /* 41.818% */
+        font-size: 18px;
         letter-spacing: 0.4px;
     }
     .typewriter h1{
@@ -310,5 +263,30 @@ main{
     }
     .videoProgram{
         width: 150px;
+    }
+    footer{
+        font-size: 50%;
+    }
+}
+
+@media screen and (min-width:721px) and (max-width:1020px) {
+    .typewriterwelcome h1{
+        font-size: 32px;
+        letter-spacing: 0.4px;
+    }
+    .typewriter h1{
+        font-size: 23px;
+    }
+    h1{
+        font-size: 21px;
+    }
+    .spawnSection2{
+        grid-template-columns: 200px 200px;
+    }
+}
+
+@media screen and (min-width:1021px) and (max-width:1500px) {
+    .spawnSection2{
+        grid-template-columns: 200px 200px 200px;
     }
 }
