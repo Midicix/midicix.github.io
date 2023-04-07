@@ -1,0 +1,4 @@
+changer première page et mettre le choix de différents langages : python, c# et web
+
+projets : pendu 1j, pendu 2j, pendu modifié par bat, calculatrice, cmd, conversation bêta, système de login en modifiant nom et prénom, 
+nb premier, sapin, change lettre du mot de place, bataille navalle alpha, déchiffreur morse, morpion c#,

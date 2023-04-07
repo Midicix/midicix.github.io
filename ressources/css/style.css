@@ -1,0 +1,506 @@
+html, body{
+    height: 99%;
+}
+
+body{
+    background-color: #3B3838;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 
+    'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+body::-webkit-scrollbar, #divtext::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track, #divtext::-webkit-scrollbar-track {
+    background: #554F4C;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #6B6461;
+}
+
+#divtext::-webkit-scrollbar-thumb {
+    background-color: #3B3838;
+}
+
+header{
+    z-index: 999;
+    background-color: #2A2929;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0px 20px;
+    padding: 0px 20px;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+.midicixLogo{
+    border-radius: 700px;
+    width: 100px;
+    margin: 5px;
+    float: left;
+    position: relative;
+}
+
+.headerText:after{
+    display:block;
+    content: '';
+    border-bottom: solid 2px orange;
+    transform: scaleX(0);
+    transition: transform 200ms ease-in-out;
+    transform-origin:100% 50%
+}
+
+.headerText:hover:after { 
+    transform: scaleX(1);
+    transform-origin:0 50%;
+}
+
+.textTab {
+    background-image: linear-gradient(90deg, #798A78, #798A79);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size .6s ease;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.textTab:hover{
+    background-size: 100% 3px;
+}
+
+/*
+.textTab {
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    color: #54b3d6;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+  }
+.textTab:hover {
+    box-shadow: inset 100px 0 0 0 #54b3d6;
+    color: white;
+  }
+
+.textTab:after{
+    display:grid;
+    width: auto;
+    content: '';
+    border-bottom: solid 2px #E50909;
+    transform: scaleX(0);
+    transition: transform 200ms ease-in-out;
+    transform-origin:100% 50%;
+}
+
+.textTab:hover:after { 
+    transform: scaleX(1);
+    transform-origin:0 50%;
+}*/
+
+a{
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 56px;
+    color: darkcyan;
+    text-align: center;
+}
+
+section{
+    flex-grow: 1;
+}
+
+.welcomePicture{
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.networkIcons{
+    width: 75px;
+    border-radius: 700px;
+    opacity: 0;
+    pointer-events: none;
+    animation-delay: 1.5s;
+    animation-duration: 1s;
+    animation-name: slideUp;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideUp {
+    from{
+        opacity: 0;
+        margin-top: 60px;
+    }
+
+    to{
+        opacity: 1;
+        margin-top: 0px;
+        pointer-events: all;
+    }
+}
+
+.spawnSection{
+    opacity: 0;
+    animation-delay: 2.5s;
+    animation-duration: 1s;
+    animation-name: spawn;
+    animation-fill-mode: forwards;
+}
+
+/*
+.spawnSection2{
+    padding-top: 30px;
+    opacity: 0;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+    animation-delay: 1.25s;
+    animation-duration: 1s;
+    pointer-events: none;
+    animation-name: spawn;
+    animation-fill-mode: forwards;
+}
+*/
+
+.spawnSection2{
+    padding-top: 30px;
+    opacity: 0;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 200px;
+    animation-delay: 1.25s;
+    animation-duration: 1s;
+    pointer-events: none;
+    animation-name: spawn;
+    animation-fill-mode: forwards;
+}
+
+@keyframes spawn {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.networkIconsArea{
+    margin : 150px auto;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+}
+
+.networkIconsArea a, .logoHeader{
+    font-size: 0px;
+    width: 0px;
+}
+
+.error404{
+    text-align: center;
+    margin-top: 15%;
+    font-size: 75px;
+    color:cornflowerblue;
+}
+
+footer{
+    background-color: #2A2929;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0px;
+    display: grid;
+    bottom: 0;
+}
+
+.footerText{
+    grid-column-start: span 3;
+    width: 100%;
+    text-align: center;
+}
+
+.morpion{
+    margin-right: 10px;
+    width: 200px;
+}
+
+p{
+    text-align: center;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+    color: #16C414;
+    font-size: 55px;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space: nowrap;     /* Keeps the content on a single line */
+    margin: 0 0; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 4px; /* Adjust as needed */
+    animation: typing 1s steps(30, end);
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriterwelcome h1 {
+    color: #16C414;
+    font-size: 55px;
+    font-family: monospace;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 0; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 4px; /* Adjust as needed */
+    animation: typing 2s steps(30, end), blink-caret .5s step-end infinite;
+}
+  
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: orange }
+}
+
+/* The typing effect */
+@keyframes typing {
+from { width: 0}
+to { width: 100%}
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.videoProgram, .textProgram, .pictureProgram{
+    width: 200px;
+    text-align: center;
+}
+
+.pictureProgram{
+    height: 175px;
+    display: grid;
+    justify-content: center;
+    /*margin-top: auto;*/
+    margin-bottom: 10px;
+}
+
+.ProjectIconsAreaCircle{
+    border-radius: 700px;
+}
+
+.ProjectIconsArea, .ProjectIconsAreaCircle{
+    width: 130px;
+    text-align: center;
+}
+
+#ProjectIconsArea{
+    width: 100px;
+    text-align: center;    
+}
+
+.textProject {
+    background-image: linear-gradient(90deg, #798A78, #798A79);
+    background-size: 0% 3px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size .6s ease;
+    text-decoration: none;
+    margin: 0 auto;
+    font-weight: 900;
+}
+
+.textProject:hover{
+    background-size: 100% 3px;
+}
+
+.linkPicture{
+    align-self: end;
+    font-size: 0px;
+    /* width: 0px;*/
+    border-radius: 700px;
+}
+
+.projectSpan{
+    display: grid; 
+    grid-template-rows: auto auto; 
+    /*display: flex;
+    flex-direction: column;*/
+}
+
+form{
+    display: grid;
+    grid-template-columns: 440px;
+    justify-content: space-around;
+}
+
+label{
+    display: grid;
+    grid-template-columns: 90px 120px;
+    align-items: center;
+}
+#label{
+    display: grid;
+    grid-template-columns: 90px 120px;
+    align-items: center;
+}
+input{
+    height: 20px;
+}
+input, select{
+    background-color: #6B6461;
+    color: white;
+}
+
+.spawnSection3{
+    opacity: 0;
+    animation-delay: 1.5s;
+    animation-duration: 1s;
+    animation-name: spawn;
+    animation-fill-mode: forwards;
+}
+
+table,
+td {
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+#formDiv{
+    display: grid;
+    grid-template-columns: 90px 290px;
+    align-items: center;
+}
+
+form article{
+    margin-left: 90px;
+    width: 290px;
+    display: grid;
+    justify-content: center;
+}
+
+form article input{
+    width: 100%;
+    margin-top: 20px;
+}
+
+input{
+    height: 20px;
+}
+
+input, select, #divtext{
+    background-color: #6B6461;
+    color: white;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 440px;
+    justify-content: space-around;
+    justify-items: center;
+    color: bisque;
+}
+
+#form{
+    display: grid;
+    grid-template-columns: 0 auto 0;
+}
+
+#form div{
+    display: grid;
+}
+
+label{
+    display: block;
+    font-size: 0.83em;
+    margin-block-start: 1.67em;
+    margin-block-end: 1.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+#divtext{
+    border: ridge 2px #2A2929;
+    padding: 5px;
+    width: 279px;
+    max-height: 70px;
+    overflow: auto;
+}
+
+@media screen and (max-width:720px) {
+    .logoHeader img, .ProjectIconsAreaCircle, .ProjectIconsArea, #ProjectIconsArea{
+        width: 50px;
+    }
+    a{
+        font-size: 12px;
+    }
+    .typewriterwelcome h1{
+        font-size: 18px; /* 41.818% */
+        letter-spacing: 0.4px;
+    }
+    .typewriter h1{
+        font-size: 23px;
+    }
+    h1{
+        font-size: 21px;
+    }
+    .spawnSection p{
+        font-size: 12px;
+    }
+    .networkIconsArea img{
+        width: 50px;
+    }
+    .spawnSection2{
+        grid-template-columns: 150px;
+        margin-bottom: 10px;
+    }
+    .videoProgram{
+        width: 150px;
+    }
+    footer{
+        font-size: 50%;
+    }
+}
+
+@media screen and (min-width:721px) and (max-width:1020px) {
+    .typewriterwelcome h1{
+        font-size: 32px; /* 41.818% */
+        letter-spacing: 0.4px;
+    }
+    .typewriter h1{
+        font-size: 38px;
+    }
+    h1{
+        font-size: 21px;
+    }
+    .spawnSection2{
+        grid-template-columns: 200px 200px;
+    }
+}
+
+@media screen and (min-width:1021px) and (max-width:1500px) {
+    .spawnSection2{
+        grid-template-columns: 200px 200px 200px;
+    }
+}

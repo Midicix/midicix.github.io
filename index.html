@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="ressources/css/style.css">
+    <link rel="shortcut icon" href="ressources/pictures/midicixV2.ico">
+    <script type="text/javascript" src="src/js/script.js"></script>
+        <!--
+   _____                _           _   ____          __  __ _     _ _      _      
+  / ____|              | |         | | |  _ \        |  \/  (_)   | (_)    (_)     
+ | |     _ __ ___  __ _| |_ ___  __| | | |_) |_   _  | \  / |_  __| |_  ___ ___  __
+ | |    | '__/ _ \/ _` | __/ _ \/ _` | |  _ <| | | | | |\/| | |/ _` | |/ __| \ \/ /
+ | |____| | |  __/ (_| | ||  __/ (_| | | |_) | |_| | | |  | | | (_| | | (__| |>  < 
+  \_____|_|  \___|\__,_|\__\___|\__,_| |____/ \__, | |_|  |_|_|\__,_|_|\___|_/_/\_\
+                                               __/ |                               
+                                              |___/                                
+-->
+</head>
+<body onload="getAge()">
+    <header>
+        <div>
+            <a href="index.html" class="logoHeader">
+                <img class="midicixLogo" src="ressources/pictures/midicixV2.png" alt="logo de Midicix">
+            </a>
+        </div>
+        <div>
+            <a class="headerText"href="src/html/projects.html">
+                Projets
+            </a>
+        </div>
+        <div>
+            <a class="headerText" href="src/html/network.html">
+                Réseaux
+            </a>
+        </div>
+        <div>
+            <a class="headerText"href="src/html/contact.html">
+                Contact
+            </a>
+        </div>
+    </header>
+    <section>
+        <main>
+            <div class="typewriterwelcome">
+                <h1>Bienvenue sur mon site web</h1>
+            </div>
+        </main>
+        <div class="spawnSection">
+            <h1>
+                Qui suis-je ?
+            </h1>
+            <p>
+                Je suis un jeune développeur de <span id="age"></span> ans, qui a commencé à programmer il y a <span id="progBegin"></span> ans
+                <br>
+                J'adore programmer en python, c#, et les langages du web tels que html, css et javascript
+            </p>
+        </div>
+    </section>
+    <footer>
+        <div class="footerText">
+            Copyright &copy; Website designed and created by Midicix - all rights reserved
+        </div>
+    </footer>
+</body>
+</html>
