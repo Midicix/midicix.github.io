@@ -362,7 +362,7 @@ label{
 input{
     height: 20px;
 }
-input, select{
+input, select, button{
     background-color: #6B6461;
     color: white;
 }
@@ -377,13 +377,38 @@ input, select{
 
 table,
 td {
-    border: 1px solid #333;
+    border: 1px solid #fff;
 }
 
-thead,
-tfoot {
-    background-color: #333;
-    color: #fff;
+table >* {
+    text-align: center;
+}
+
+td{
+    min-width: 100px;
+}
+
+@font-face {
+    font-family: 'Digital'; /*a name to be used later*/
+    src: url('../../userContent/font/Open\ 24\ Display\ St.ttf'); /*URL to font*/
+}
+
+#hour{
+    font-size: 150px;
+    font-family: 'Digital';
+    display: grid;
+    grid-template-columns: 75px 75px 100px 75px 75px;
+    text-align: center;
+}
+
+#clock{
+    margin: auto;
+    background-image: url('../../userContent/pictures/digital-clock.png');
+    width: 500px;
+    height: 450px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 #formDiv{
