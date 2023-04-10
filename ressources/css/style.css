@@ -506,6 +506,15 @@ label{
     footer{
         font-size: 50%;
     }
+    #hour{
+        font-size: 15px;
+        grid-template-columns: 15px 15px 30px 15px 15px;
+    }
+    #clock{
+        background-size: 100px;
+        width: 100px;
+        height: 90px;
+    }
 }
 
 @media screen and (min-width:721px) and (max-width:1020px) {

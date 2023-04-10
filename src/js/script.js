@@ -97,7 +97,7 @@ function getHour(){
         m1 = minutes[1];
     }
 
-    console.log(y0 + y1 + y2 + y3 + ' ' + mo0 + mo1 + ' ' + d0 + d1 + ' ' + h0 + h1 + ':' + m0 + m1);
+    //console.log(y0 + y1 + y2 + y3 + ' ' + mo0 + mo1 + ' ' + d0 + d1 + ' ' + h0 + h1 + ':' + m0 + m1);
     
     hr0.innerText = h0;
     hr1.innerText = h1;
@@ -106,80 +106,6 @@ function getHour(){
 
     setTimeout(getHour, 1000);
 }
-
-/*
-function getHour(){
-
-    hr0 = document.getElementById("hr0");
-    hr1 = document.getElementById("hr1");
-    min0 = document.getElementById("min0");
-    min1 = document.getElementById("min1");
-
-    while (true){
-        dateFull = new Date();
-        year = String(dateFull.getFullYear());
-        y0 = year[0];
-        y1 = year[1];
-        y2 = year[2];
-        y3 = year[3];
-    
-        month = String(dateFull.getMonth() + 1);
-        if (month.length == 1)
-        {
-            mo0 = '0';
-            mo1 = month[0];
-        }
-        else
-        {
-            mo0 = month[0];
-            mo1 = month[1];
-        }
-    
-        date = String(dateFull.getDate());
-        if (date.length == 1)
-        {
-            d0 = '0';
-            d1 = date[0];
-        }
-        else
-        {
-            d0 = date[0];
-            d1 = date[1];
-        }
-    
-        hour = String(dateFull.getHours());
-        if (hour.length == 1)
-        {
-            h0 = '0';
-            h1 = hour[0];
-        }
-        else
-        {
-            h0 = hour[0];
-            h1 = hour[1];
-        }
-    
-        minutes = String(dateFull.getMinutes());
-        if (minutes.length == 1)
-        {
-            m0 = '0';
-            m1 = minutes[0];
-        }
-        else
-        {
-            m0 = minutes[0];
-            m1 = minutes[1];
-        }
-    
-        console.log(y0 + y1 + y2 + y3 + ' ' + mo0 + mo1 + ' ' + d0 + d1 + ' ' + h0 + h1 + ':' + m0 + m1);
-        
-        hr0.innerText = h0;
-        hr1.innerText = h1;
-        min0.innerText = m0;
-        min1.innerText = m1;
-    }
-}
-*/
 
 function getYear(){
     contenu = document.getElementById("year");
