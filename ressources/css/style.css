@@ -375,6 +375,10 @@ input, select, button{
     animation-fill-mode: forwards;
 }
 
+table{
+    margin: auto;
+}
+
 table,
 td {
     border: 1px solid #fff;
@@ -386,6 +390,10 @@ table >* {
 
 td{
     min-width: 100px;
+}
+
+td[id^="date"]{
+    height: 100px;
 }
 
 @font-face {
@@ -507,13 +515,13 @@ label{
         font-size: 50%;
     }
     #hour{
-        font-size: 15px;
-        grid-template-columns: 15px 15px 30px 15px 15px;
+        font-size: 30px;
+        grid-template-columns: 30px 30px 60px 30px 30px;
     }
     #clock{
-        background-size: 100px;
-        width: 100px;
-        height: 90px;
+        background-size: 200px;
+        width: 200px;
+        height: 180px;
     }
 }
 
