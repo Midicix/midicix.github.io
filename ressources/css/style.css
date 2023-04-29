@@ -375,25 +375,28 @@ input, select, button{
     animation-fill-mode: forwards;
 }
 
-table{
+#calendarBloc{
     margin: auto;
+    background-image: url('../../userContent/pictures/calendar-bloc.png');
+    background-size: 400px;
+    width: 400px;
+    height: 400px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
-table,
-td {
-    border: 1px solid #fff;
-}
-
-table >* {
+#month, #date{
+    color: black;
     text-align: center;
 }
 
-td{
-    min-width: 100px;
+#month{
+    font-size: 45px;
 }
 
-td[id^="date"]{
-    height: 100px;
+#date{
+    font-size: 115px;
 }
 
 @font-face {

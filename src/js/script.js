@@ -110,11 +110,7 @@ function getHour(){
 function calendar() {
     dateFull = new Date();
     date = String(dateFull.getDate());
-    month = String(dateFull.getMonth() + 1);
-    contenu = document.getElementById("year");
-    
-    year = dateFull.getFullYear();
-    contenu.innerText = year;
+    month = String(dateFull.getMonth());
 
     if (date.length == 1)
     {
@@ -128,42 +124,13 @@ function calendar() {
     }
     realDate = d0 + d1;
 
-    if (month.length == 1)
-    {
-        mo0 = '0';
-        mo1 = month[0];
-    }
-    else
-    {
-        mo0 = month[0];
-        mo1 = month[1];
-    }
-    realMonth = mo0 + mo1;
+    nameMonth = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
 
-    jour = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
-    mois = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+    IdMonth = document.getElementById("month");
+    IdDate = document.getElementById("date");
 
-    prefixJ = "date";
-    prefixM = "month";
-
-
-    for (i = 0; i < jour.length ; i++){
-        if (jour[i] == realDate){
-            document.getElementById(prefixJ + jour[i]).style.backgroundColor = "#25E0C9";
-        }
-        else{
-            document.getElementById(prefixJ + jour[i]).style.backgroundColor = "#3B3838";
-        }
-    }
-
-    for (i = 0; i < mois.length ; i++){
-        if (mois[i] == realMonth){
-            document.getElementById(prefixM + mois[i]).style.backgroundColor = "#288371";
-        }
-        else{
-            document.getElementById(prefixM + mois[i]).style.backgroundColor = "#3B3838";
-        }
-    }
+    IdMonth.innerText = nameMonth[month];
+    IdDate.innerText = realDate;
     
     setTimeout(calendar, 1000);
 }
