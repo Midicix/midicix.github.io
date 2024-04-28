@@ -42,7 +42,7 @@ header{
 
 .midicixLogo{
     border-radius: 700px;
-    width: 100px;
+    width: 75px;
     margin: 5px;
     float: left;
     position: relative;
@@ -111,7 +111,7 @@ a{
     text-decoration: none;
 }
 
-h1{
+h2{
     font-size: 56px;
     color: darkcyan;
     text-align: center;
@@ -133,7 +133,6 @@ section{
     border-radius: 700px;
     opacity: 0;
     pointer-events: none;
-    animation-delay: 1.5s;
     animation-duration: 1s;
     animation-name: slideUp;
     animation-fill-mode: forwards;
@@ -175,14 +174,17 @@ section{
 }
 */
 
-.spawnSection2{
+.spawnSection2, .section{
     padding-top: 30px;
-    opacity: 0;
     display: grid;
     grid-template-columns: 200px 200px 200px 200px;
     justify-content: center;
     row-gap: 20px;
     column-gap: 200px;
+}
+
+.spawnSection2{
+    opacity: 0;
     animation-delay: 1.25s;
     animation-duration: 1s;
     pointer-events: none;
@@ -230,7 +232,7 @@ footer{
 }
 
 .footerText{
-    grid-column-start: span 3;
+    /* grid-column-start: span 3; */
     width: 100%;
     text-align: center;
 }
@@ -245,14 +247,16 @@ p{
 }
 
 /* DEMO-SPECIFIC STYLES */
-.typewriter h1 {
+h1 {
     color: #16C414;
     font-size: 55px;
     font-family: monospace;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
     white-space: nowrap;     /* Keeps the content on a single line */
     margin: 0 0; /* Gives that scrolling effect as the typing happens */
     letter-spacing: 4px; /* Adjust as needed */
+}
+.typewriter h1{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
     animation: typing 1s steps(30, end);
 }
 
@@ -288,7 +292,7 @@ main{
 }
 
 .videoProgram, .textProgram, .pictureProgram{
-    width: 200px;
+    /* width: 200px; */
     text-align: center;
 }
 
@@ -384,6 +388,7 @@ input, select, button{
     display: grid;
     align-items: center;
     justify-content: center;
+    user-select: none;
 }
 
 #month, #date{
@@ -420,6 +425,7 @@ input, select, button{
     display: grid;
     align-items: center;
     justify-content: center;
+    user-select: none;
 }
 
 #formDiv{
@@ -495,10 +501,10 @@ label{
         font-size: 18px; /* 41.818% */
         letter-spacing: 0.4px;
     }
-    .typewriter h1{
+    h1{
         font-size: 23px;
     }
-    h1{
+    h2{
         font-size: 21px;
     }
     .spawnSection p{
@@ -507,7 +513,7 @@ label{
     .networkIconsArea img{
         width: 50px;
     }
-    .spawnSection2{
+    .spawnSection2, .section{
         grid-template-columns: 150px;
         margin-bottom: 10px;
     }
@@ -536,16 +542,217 @@ label{
     .typewriter h1{
         font-size: 38px;
     }
-    h1{
+    h2{
         font-size: 21px;
     }
-    .spawnSection2{
+    .spawnSection2, .section{
         grid-template-columns: 200px 200px;
     }
 }
 
 @media screen and (min-width:1021px) and (max-width:1500px) {
-    .spawnSection2{
+    .spawnSection2, .section{
         grid-template-columns: 200px 200px 200px;
     }
+}
+
+
+
+
+
+
+
+
+table {
+	border-collapse: collapse;
+	border: 2px solid rgb(140 140 140);
+	font-family: sans-serif;
+	font-size: 0.8rem;
+	letter-spacing: 1px;
+	text-align: center;
+	margin: 0 auto;
+  }
+  
+  caption {
+	caption-side: bottom;
+	padding: 10px;
+	font-weight: bold;
+  }
+  
+  thead,
+  tfoot {
+	background-color: #333438;
+  }
+  
+  th,
+  td {
+	border: 1px solid rgb(160 160 160);
+	padding: 8px 10px;
+  }
+  
+  td:last-of-type {
+	text-align: center;
+  }
+  
+  tbody > tr:nth-of-type(even) {
+	background-color: #2b2c2f;
+  }
+  
+  tfoot th {
+	text-align: right;
+  }
+  
+  tfoot td {
+	font-weight: bold;
+  }
+
+
+#extensionSelection{
+    margin: 20px auto;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+#extensionSelection span{
+    text-align: center;
+}
+
+#extensionSelection a{
+    width: 0;
+}
+
+.addonsCard{
+    display: grid;
+    width: 250px;
+    background-color: #2A2929;
+    border-radius: 15px;
+    text-align: center;
+    user-select: none;
+}
+
+.addonsCard span{
+    font-weight: bold;
+}
+
+.addonsCard p{
+    text-align: start;
+    margin: 5px;
+    font-size: 15px;
+}
+
+.addonsCard img{
+    margin: 5px auto;
+    width: 75px;
+}
+
+.plaformIcons{
+    width: 35px;
+}
+
+#ulPlatform{
+    padding: 0;
+}
+
+#ulPlatform li{
+    list-style-type: none;
+    width: 200px;
+    background-color: #4d4b4b;
+    border-radius: 15px;
+    margin: 5px;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+
+#divPlatform{
+    background-color: #2A2929;
+    /* border-radius: 25px; */
+    width: 210px;
+    position: fixed;
+    display: grid;
+    align-items: center;
+    right: 50px;
+}
+
+summary{
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+h5{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#reviewBody, #addonBody{
+    overflow: hidden;
+}
+
+#reviewBody main{
+    display: grid;
+}
+
+#reviewBody h1{
+    text-align: center;
+}
+
+#addonsFooter{
+    display: grid;
+    grid-auto-flow: column;
+    margin: 0 auto;
+}
+
+#addonsFooter > *{
+    margin: 0 10px;
+}
+
+.addonReviewPicture{
+    width: 250px;
+    float: left;
+    margin: 0px 15px 15px 0px;
+}
+
+#reviewBody .addonPlatform{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    background-color: #2A2929;
+    border-radius: 25px;
+    width: 250px;
+    margin: 0 auto;
+}
+
+#reviewBody .addonPlatform img{
+    width: 35px;
+    margin-left: 5px;
+}
+
+#reviewBody .addonPlatform span{
+    margin-right: 5px;
+}
+
+#addonContent{
+    display: grid;
+    grid-auto-flow: column;
+    column-count: 2;
+    direction: rtl;
+    width: 100%;
+}
+
+#addonContent p{
+    font-size: 28px;
+    direction: ltr;
+    text-align: start;
+    width: 800px;
+}
+
+#reviewBody section, #reviewBody .section{
+    display: block;
+}
+
+.addonPlatformLink{
+    font-weight: normal;
+    font-size: 17px;
+    display: contents;
 }
