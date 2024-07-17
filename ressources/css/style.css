@@ -756,3 +756,25 @@ h5{
     font-size: 17px;
     display: contents;
 }
+
+#contactSection{
+    display: grid;
+}
+
+#contactSection a{
+    font-size: 19px;
+}
+
+#contactContainer img{
+    width: 50px;
+}
+
+#contactContainer{
+    display: grid;
+    grid-auto-flow: column;
+    width: 10%;
+    align-items: center;
+    background-color: #242424;
+    border-radius: 15px;
+    margin: auto;
+}
